@@ -1,0 +1,97 @@
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={blue}  %black!50!blue
+}
+\renewcommand{\theequation}{\theenumi}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large Rupa Sai Sreshta Vallabhaneni}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{0}
+\setcounter{enumii}{3}
+
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}  If $\pr{A}$ = 0.8, $\pr{B} = 0.5$ and $\pr{B \vert A = 0.4}$, find  \\
+(i)$\pr{A,B}$ 
+\\
+ (ii)$\pr{A \vert B}$
+\\
+ (iii)$\pr{A+B}$
+\\[1ex]
+
+\solution\\
+(i)$\pr{A,B}$
+ \\
+  Now, we know that
+ \begin{align}
+\pr{B \vert A}= \frac{\pr{A , B}}{\pr{A}}
+ \end{align}
+ \begin{align}
+ 0.4=\frac{\pr{A, B}}{\pr{A}}
+ \end{align}
+ \begin{align}
+ 0.4=\frac{\pr{A, B}}{0.8}
+ \end{align}
+ \begin{align}
+ \pr{A,B}=0.4 \times 0.8
+ \end{align}
+ \begin{align}
+ \pr{A,B}=0.32
+ \label{eq 1}
+ \end{align}
+ (ii)$\pr{A \vert B}$
+ \begin{align}
+ \pr{A \vert B}= \frac{\pr{A,B}}{\pr{B}}
+ \end{align}
+ \begin{align}
+ \frac{\pr{ B \vert A}\pr{A}}{\pr{B}}.
+ \end{align}
+ \begin{align}
+  \frac{0.4 \times 0.8}{0.5}
+ \end{align}
+ \begin{align}
+ = \frac{0.32}{0.5}
+ \end{align}
+  \begin{align}
+ = 0.64
+ \end{align}
+  \begin{align}
+\pr{A \vert B} = 0.64
+ \end{align}
+ (iii) $\pr{A+B}$
+ \begin{align}
+ \pr{A+B}= \pr{A}+\pr{B}-\pr{A, B} \label{eq 2}
+ \end{align}
+ Substitute \eqref{eq 1}  in \eqref{eq 2}
+ \begin{align}
+ =0.8+0.5-0.32
+ \end{align}
+ \begin{align}
+ =1.3-0.32
+ \end{align}
+ \begin{align}
+ = 0.98
+ \end{align}
+ \begin{align}
+ \pr{A+B}=0.98
+ \end{align}
+\end{enumerate}
+\end{document}
